@@ -29,13 +29,13 @@ repositories { // see also: settings.gradle
     jcenter()
 }
 
-//# kotlin {
-//#     explicitApiWarning()
-//# }
-//#
-//# tasks.test {
-//#     useJUnitPlatform()
-//# }
+kotlin {
+    explicitApiWarning()
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
