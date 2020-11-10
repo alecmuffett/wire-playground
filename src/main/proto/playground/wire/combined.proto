@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package playground.wire;
+
+option java_package = "playground.wire";
+
+enum Period {
+  CRETACEOUS = 1;
+  JURASSIC = 2;
+  TRIASSIC = 3;
+}
+
+message Dinosaur {
+  optional string name = 1;
+  repeated string picture_urls = 2;
+  optional double length_meters = 3;
+  optional double mass_kilograms = 4;
+  optional Period period = 5;
+}
