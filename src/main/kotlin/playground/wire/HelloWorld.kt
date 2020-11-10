@@ -28,6 +28,6 @@ public fun main(args: Array<String>) {
         period = Period.JURASSIC
     )
     ...
-    println(bytes.toHexString())
+    println(stegoBytes.toHexString())
     */
 }
