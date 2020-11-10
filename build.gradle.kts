@@ -7,7 +7,7 @@ description = "playground.wire.MainKt"
 
 plugins {
     kotlin("jvm") version "1.4.10"
-    id("com.github.johnrengelman.shadow") version "6.1.0"
+    id("com.github.johnrengelman.shadow") version "6.1.0" // we don't need id("application") if using this?
 }
 
 /*
@@ -20,8 +20,8 @@ plugins {
  */
 
 dependencies {
-    Libs.implementations.forEach(::implementation)
-    Libs.testImplementations.forEach(::testImplementation)
+    Libs.implementations.forEach{ this.implementation(it) } // be verbose to avoid ambiguity
+    Libs.testImplementations.forEach { this.testImplementation(it) }
 }
 
 repositories { // see also: settings.gradle
