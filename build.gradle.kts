@@ -10,15 +10,6 @@ plugins {
     id("com.github.johnrengelman.shadow") version "6.1.0" // we don't need id("application") if using this?
 }
 
-/*
- buildscript {
-    dependencies {
-	classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinDefault}")
-	classpath("com.squareup.wire:wire-gradle-plugin:${Versions.wireDefault}")
-    }
- }
- */
-
 dependencies {
     Libs.implementations.forEach{ this.implementation(it) } // be verbose to avoid ambiguity
     Libs.testImplementations.forEach { this.testImplementation(it) }
