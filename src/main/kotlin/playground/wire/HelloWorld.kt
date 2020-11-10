@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
     val message by di.instance<String>(tag = "greeting")
     val bytes by di.instance<ByteArray>(tag = "binary")
     println(message)
-    println("baadd00d == " + bytes.toHexString())
     println("args: " + args.joinToString())
+    println("baadd00d == " + bytes.toHexString())
+    // todo: build a Dinosaur message, serialise it as a ByteArray and print it as hex
 }
