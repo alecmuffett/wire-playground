@@ -22,12 +22,13 @@ public fun main(args: Array<String>) {
     println("args: " + args.joinToString())
     println("baadd00d == " + bytes.toHexString())
     // todo: build a Dinosaur message, serialise it as a ByteArray and print it as hex
-    /*
-    val stegosaurus = Dinosaur(
+    val inDino = Dinosaur(
         name = "Stegosaurus",
         period = Period.JURASSIC
     )
-    ...
+    val stegoBytes = inDino.encode()
     println(stegoBytes.toHexString())
-    */
+
+    val outDino = Dinosaur.ADAPTER.decode(stegoBytes)
+    println("Stegosaurus == " + outDino.name)
 }
